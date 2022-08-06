@@ -1,0 +1,140 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-------------------------------CDN  Insersion de leaflet css----------------->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+     
+  <!---------------------------------CDN leaflet javascript---------------------->
+     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+     crossorigin=""></script>
+       <!-----------------------------------ENLASES A ARCHIVOS ADJUNTOS---------------------------------------->
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="css/fontello.css">
+
+<!-----------------------------------bootstrap 5---------------------------------------->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+
+
+
+
+<body>
+  <!--------------------------------Navbar Boosttrap----------------------------------------------->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Anticreticos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Venta</a>
+          <a class="nav-link" href="#">Anticretico</a>
+          <a class="nav-link" href="#">Alquiler</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!--------------------------------CDN Navbar Boosttrap script----------------------------------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!--------------------------------contenedor Mapa----------------------------------------------->
+
+<div id="map"></div>
+
+<script src="bundle.js" type="module" ></script>
+
+<!--------------------------------card imagenges----------------------------------------------->
+<div class="card1" id="card1">
+  <img src="" alt="Avatar" style="width:100%" id="imagencard">
+  <div class="container">
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+  <div class="botonc">
+    <button type="button" class="btn btn-primary btn-sm" id="btnsalir">Cerrar</button>
+  </div>
+</div>
+<!--------------------------------bottones flotantes----------------------------------------------->
+<div class="german">
+  <input type="checkbox" id="btn-mas">
+  
+  <div class="redes">
+    <a href=""  class="icon-user"> </a>
+    <a href="" class="icon-whatsapp"></a>
+    <a href="" class="icon-help"></a>
+  </div>
+  <div class="btn-mas">
+    <label for="btn-mas" class="icon-plus"></label>
+  </div>
+  
+</div>
+<!--------------------------------botton inceratr casa----------------------------------------------->
+<div class="btn-ventacasa">
+<a href="" class="icon-home" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+</div>  
+<!------ Modal--->
+ 
+  <form class="addcasaventa">
+   <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Publique un anuncio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Coordenada "x"</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" name="formGroupExampleInput" placeholder="Example input placeholder" required>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Coordenada "y"</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="formGroupExampleInput2" placeholder="Another input placeholder" required>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Precio de venta "$us"</label>
+              <input type="text" class="form-control" id="formGroupExampleInput3" name="formGroupExampleInput3" placeholder="Ejemplo: 150,000.00 $" required>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Subir imagen principal (sera la imagen que se muestre primero)</label>
+              <input type="file" class="form-control" id="formGroupExampleInput4" name="formGroupExampleInput4"  required>
+              <img   id="imgFotoPrincipalPreload"  alt/>
+      
+            </div>
+            <div class="mb-3"><!------input imagens secundarias--->
+              <label for="formGroupExampleInput2" class="form-label">Subir imagenges secundarias (imagenes dek interior y patios)</label>
+              <input type="file" class="form-control" id="formGroupExampleInput5" name="formGroupExampleInput5"  required>
+            </div>
+
+        </form>
+
+        </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" id="btnsubircasaventa">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+</body>
+</html>

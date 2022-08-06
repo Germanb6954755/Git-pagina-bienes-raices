@@ -1,0 +1,153 @@
+
+#map { 
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+
+*{  
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#btn-mas{
+    display:none;
+}
+
+.german{ 
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    z-index: 2;
+}
+
+.redes a, .icon-plus{
+    padding:9px;
+
+    display:block;
+    text-decoration:none;
+    background: #cc2b2b;
+    color:#fff;
+    width:40px;
+    height:40px;
+    
+    text-align: center;
+    border-radius:50%;
+    box-shadow:0px 1px 10px rgba(0,0,0,0.4);
+    transition:all 500ms ease-in-out;
+
+}
+.icon-plus{
+    
+    
+    display:block;
+    text-decoration:none;
+    background: #cc2b2b;
+    color:#fff;
+    width:40px;
+    height:40px;
+    
+    text-align: center;
+    border-radius:50%;
+    box-shadow:0px 1px 10px rgba(0,0,0,0.4);
+    transition:all 500ms ease-in-out;
+
+}
+
+
+.redes a:hover{
+    background:#fff;
+    color:#cc2b2b;
+
+}
+
+.redes a{
+    margin-bottom:-15px;
+    opacity:0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom:10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-plus{ 
+    cursor:pointer;
+    background:#f44141;
+
+}
+/******boton incertar casa*/
+.btn-ventacasa{
+    display:table-cell;
+    vertical-align:middle;
+}
+.icon-home{
+    text-decoration: none;
+    position: fixed;
+    width:40px;
+    height:40px;
+    line-height:50px;
+    bottom:30px;
+    right:90px;
+    background: #136e3c;
+    color: #fff;
+    border-radius:50px;
+    z-index: 2;
+    font-size:20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    padding-top: 9px;;
+}
+.icon-home:hover{ 
+    text-decoration: none;
+    color: #136e3c;
+    background: #fff;
+}
+
+/******card imagenes*/
+
+.card1{ 
+    background: #fff;
+    position:absolute; 
+    width:50%;
+    
+    top:50%;
+    right:50%;
+    z-index: 3;
+    margin: -18% -25% 0 0;
+    display:none;
+}
+
+#imagencard {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .card1{
+        width:100%;
+        top:50%;
+        right:50%;
+        z-index: 3;
+        margin: -50% -50% 0 0;
+    }
+  }
+
+
+  .btn{
+      position: block;
+      
+  }
+  .botonc{
+      padding: 10px;
+      text-align: right;
+  }
+
+  #imgFotoPrincipalPreload {
+    height:100%;
+    width: 100%;
+
+  }
+ 
